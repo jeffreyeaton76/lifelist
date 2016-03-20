@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+ }
+ .wrapper {
+   min-height:100%;
+   width:100%;
+   height: 100vh;
+   position:relative;
+   display:inline-block;
+ }
+ .sidebar {
+   background: #d5a761;
+   width: 20%;
+   top:0px;
+   left:0px;
+   bottom:0px;
+   position:absolute;
+ }
+ .content {
+   height: 100vh;
+   width:80%;
+   top:0px;
+   position:relative;
+   background-color: #F1F1D4;
+   float:right;
+ }
+ .bird_img {
+   height: 150px;
+   width: 150px;
+ }
+ img {
+   max-height: 100%;
+   max-width: 100%;
+ }
+ .post {
+   width: 800px;
+   border: 2px solid white;
+ }

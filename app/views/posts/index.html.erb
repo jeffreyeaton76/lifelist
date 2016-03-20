@@ -1,0 +1,8 @@
+<h1>Welcome to LifeList</h1>
+<h2>bird sighting tracker</h2>
+<% @posts.each do |post| %>
+<div class="post">
+<h2><%= post.bird.titleize %> in <%= post.city %>, <%= post.state %> as seen by <%= post.user.first_name %> <%= post.user.last_name %></h2>
+<div class="bird_img"><img src="<%= post.img_url %>" alt="<%= post.bird %>"></div>
+</div>
+<% end %>
