@@ -1,0 +1,9 @@
+<h1 id="header_index">Latest Sightings</h1>
+<div class="post">
+  <div class="bird_img"><img class="bird_img" src="<%= @post.img_url %>" alt="<%= @post.bird %>"></div>
+  <h2><%= @post.bird.titleize %>, <span id="location">in <%= @post.city %>, <%= @post.state %> by USER.NAME</span></h2>
+  <p> <%= @post.field_notes %> </p>
+  <% @comment.reverse.each do |comment| %>
+  <div class="comments"><p><i><%= comment.body %></i></p></div>
+  <% end %>
+</div>

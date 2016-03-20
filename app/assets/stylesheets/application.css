@@ -34,19 +34,28 @@ body {
 h2 {
   color: #3775e8;
   font-family: 'PT Sans Narrow', sans-serif;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-size: 25pt;
 }
 h3 {
   color: #3775e8;
   font-family: 'PT Sans Narrow', sans-serif;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 #location {
   font-size: 15px;
 }
 p {
   font-family: 'PT Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #3775e8;
+}
+.entry_link {
+  height: 20px;
+  float: right;
+  margin-right: 80px;
 }
 .wrapper {
   min-height:100%;
