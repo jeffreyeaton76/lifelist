@@ -11,7 +11,7 @@
 <body>
     <div class="sidebar">
       <div class="logo_div" id="logo"><%= image_tag "lifelistlogo2.png", alt: "Life List logo" %></div>
-      <div class="sidebar_nav"></div>
+      <div class="sidebar_nav"><p><%= link_to "Need an Account?", new_user_path %></p></div>
     </div>
     <div class="content">
       <%= yield %>
