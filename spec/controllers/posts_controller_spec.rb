@@ -7,4 +7,11 @@ RSpec.describe PostsController, :type => :controller do
       expect(response).to have_http_status(:success)
     end
   end
+
+  context "GET show" do
+    it "renders the show template" do
+      get :show
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
