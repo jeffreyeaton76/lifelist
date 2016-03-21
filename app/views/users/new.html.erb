@@ -1,6 +1,7 @@
-<h2>Create an Account</h2>
+<h2 class="header_index">Create an Account</h2>
 <div class="form-signin">
 <%= form_for @user do |f| %>
+<p></p>
 <%= f.label :first_name %>
 <%= f.text_field :first_name %>
 <p></p>
@@ -19,6 +20,7 @@
 <%= f.label :password %>
 <%= f.password_field :password %>
 <p></p>
-<%= f.submit "Submit" %>
+<br>
+<%= f.submit "Submit", :class => "submit_button" %>
 <% end %>
 </div>

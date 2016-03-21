@@ -19,11 +19,11 @@
   box-sizing: border-box;
 }
 html {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 body {
   margin: 0;
@@ -125,31 +125,60 @@ img {
   margin-left: 50px;
   margin-top: 20px;
 }
+.form_new_post,
 .form-signin {
-    max-width: 350px;
-    padding: 19px 29px 29px;
-    margin: 0 auto 20px;
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-    box-shadow: 0 1px 2px rgba(0,0,0,.05);
-    font-family: 'PT Sans', sans-serif;
+  max-width: 350px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  font-family: 'PT Sans', sans-serif;
 }
-
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-    margin-bottom: 10px;
+.submit_button {
+  font-size: 20px;
+  margin-top: 180px;
+  margin-left: 40px;
 }
-
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 16px;
-    height: auto;
-    margin-bottom: 15px;
-    padding: 7px 9px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+  float: right;
+}
+label {
+  float: left;
+}
+.loginform {
+  margin-left: 50px;
+  margin-top: 50px;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  letter-spacing: 1px;
+}
+.navbox {
+  width: 70%;
+  background: white;
+  font-family: 'PT Sans', sans-serif;
+  color: #3775e8;
+  margin: auto;
+  margin-top: 50px;
+}
+.navbox li{
+  margin-left: -30px;
+  padding: 5px;
+  list-style: none;
+}
+.navbox a {
+  text-align: left;
+  color: #3775e8
 }

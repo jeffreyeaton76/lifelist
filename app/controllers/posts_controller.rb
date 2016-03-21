@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @user = User.new
   end
 
   def show
@@ -9,18 +10,26 @@ class PostsController < ApplicationController
   end
 
   def new
+    redirect_to root_path unless @current_user
     @post = Post.new
   end
 
   def create
+    redirect_to root_path unless @current_user
     @post = Post.create(post_params)
+    @post.user = SELF?????
+    if @post.save
+      redirect_to @post
+    end
   end
 
   def edit
+    redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
   end
 
   def update
+    redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to @post
@@ -30,6 +39,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to :action => :index

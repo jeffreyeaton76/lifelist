@@ -1,0 +1,26 @@
+<h1 id="header_index">Create a New Sighting</h1>
+<div class="form_new_post">
+<%= form_for @post do |f| %>
+<p></p>
+<%= f.label :bird %>
+<%= f.text_field :bird %>
+<p></p>
+<%= f.label :img_url %>
+<%= f.text_field :img_url %>
+<p></p>
+<%= f.label :date_seen %>
+<%= f.text_field :date_seen %>
+<p></p>
+<%= f.label :city %>
+<%= f.text_field :city %>
+<p></p>
+<%= f.label :state %>
+<%= f.text_field :state %>
+<p></p>
+<%= f.label :field_notes %>
+<%= f.text_field :field_notes %>
+<p></p>
+<br>
+<%= f.submit "Submit", :class => "submit_button" %>
+<% end %>
+</div>

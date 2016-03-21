@@ -5,26 +5,37 @@ class UsersController < ApplicationController
   end
 
   def new
+    redirect_to root_path unless @current_user
     @user = User.new
   end
 
   def create
     @user = User.create(user_params)
-    redirect_to user_path(@user)
+    session[:user_id] = @user.id
+    redirect_to user_path(@current_user)
   end
 
   def show
+    redirect_to root_path unless @current_user
     @user = User.find(params[:id])
   end
 
   def edit
+    redirect_to root_path unless @current_user
     @user = User.find(params[:id])
   end
 
   def update
+    redirect_to root_path unless @current_user
     @user = User.find(params[:id])
     @user.update(user_params)
     redirect_to users_path(@user)
+  end
+
+  def destroy
+    redirect_to root_path unless @current_user
+    @user = User.find(params[:id])
+    @user.destroy
   end
 
   private

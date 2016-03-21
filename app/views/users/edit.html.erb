@@ -1,22 +1,26 @@
-<h2>Edit Your Profile</h2>
+<h1 id="header_index">Edit Your Profile</h1>
+<div class="form-signin">
 <%= form_for @user do |f| %>
+<p></p>
 <%= f.label :first_name %>
 <%= f.text_field :first_name %>
-
+<p></p>
 <%= f.label :last_name %>
-<%= f.password_field :last_name %>
-
+<%= f.text_field :last_name %>
+<p></p>
 <%= f.label :city %>
 <%= f.text_field :city %>
-
+<p></p>
 <%= f.label :state %>
-<%= f.password_field :state %>
-
+<%= f.text_field :state %>
+<p></p>
 <%= f.label :username %>
 <%= f.text_field :username %>
-
+<p></p>
 <%= f.label :password %>
 <%= f.password_field :password %>
-
-<%= f.submit "Submit" %>
+<p></p>
+<br>
+<%= f.submit "Submit", :class => "submit_button" %>
 <% end %>
+</div>

@@ -1,0 +1,22 @@
+<% if @current_user == nil %>
+  <div class=loginform>
+    <%= form_for @user, :as => :user, url: sessions_path, method: :post do |f| %>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+    <br>
+    <br>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.submit "Submit" %>
+  </div>
+  <% end %>
+<% else %>
+  <div class="navbox">
+    <ul>
+      <li><%= link_to "Add a Sighting", new_post_path %></li>
+      <li><%= link_to "Search", "#" %></li>
+      <li><%= link_to "Edit My Profile", edit_user_path(@current_user) %></li>
+    </ul>
+  </div>
+<% end %>
