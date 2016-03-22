@@ -10,9 +10,8 @@
     <%= f.text_field :body, :placeholder => "Leave a comment", :class => 'comment_field' %>
   </p>
   <% end %>
-  <% if @post.comment
-  <% @comment.reverse.each do |comment| %>
+  <% @comments.reverse.each do |comment| %>
   <div class="comments"><p><i><%= comment.body %></i></p>
-  <p><i>-- <%= comment.user.first_name %> <%= comment.user.last_name %></div>
+  <p><i>-- <%= comment.user.first_name %> <%= comment.user.last_name %></i></div>
   <% end %>
 </div>
