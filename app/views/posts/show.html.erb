@@ -1,9 +1,18 @@
 <h1 id="header_index">Latest Sightings</h1>
-<div class="post">
+<div class="post_show">
   <div class="bird_img"><img class="bird_img" src="<%= @post.img_url %>" alt="<%= @post.bird %>"></div>
   <h2><%= @post.bird.titleize %>, <span id="location">in <%= @post.city %>, <%= @post.state %> by <%= @post.user.first_name %> <%= @post.user.last_name %></span></h2>
   <p> <%= @post.field_notes %> </p>
+  <br>
+  <h2>Comments</h2>
+  <%= form_for ([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.text_field :body, :placeholder => "Leave a comment", :class => 'comment_field' %>
+  </p>
+  <% end %>
+  <% if @post.comment
   <% @comment.reverse.each do |comment| %>
-  <div class="comments"><p><i><%= comment.body %></i></p></div>
+  <div class="comments"><p><i><%= comment.body %></i></p>
+  <p><i>-- <%= comment.user.first_name %> <%= comment.user.last_name %></div>
   <% end %>
 </div>

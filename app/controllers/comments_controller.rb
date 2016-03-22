@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     redirect_to root_path unless @current_user
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create!(comment_params)
+    @comment.user = @current_user
     redirect_to post_path(@post)
   end
 

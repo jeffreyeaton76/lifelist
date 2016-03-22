@@ -125,6 +125,12 @@ img {
   margin-left: 50px;
   margin-top: 20px;
 }
+.post_show {
+  width: 90%;
+  height: 170px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
 .form_new_post,
 .form-signin {
   max-width: 350px;
