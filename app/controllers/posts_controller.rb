@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-    @user = User.new
   end
 
   def show
@@ -16,8 +15,8 @@ class PostsController < ApplicationController
 
   def create
     redirect_to root_path unless @current_user
-    @post = Post.create(post_params)
-    @post.user = SELF?????
+    @post = Post.new(post_params)
+    @post.user = @current_user
     if @post.save
       redirect_to @post
     end

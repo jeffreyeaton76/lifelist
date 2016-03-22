@@ -6,10 +6,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    input_username = params[:user][:username]
+    input_username = params[:session][:username]
     if User.exists?(username: input_username)
       @user = User.find_by(username: input_username)
-      if @user.password === params[:user][:password]
+      if @user.password === params[:session][:password]
         flash[:alert] = "You're signed in!"
         session[:user_id] = @user.id
         cookies[:username] = @user.username
