@@ -41,7 +41,7 @@ class PostsController < ApplicationController
     redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to :action => :index
+    redirect_to :back
   end
 
   private

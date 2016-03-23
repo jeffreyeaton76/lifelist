@@ -48,20 +48,18 @@ h3 {
   font-family: 'PT Sans Narrow', sans-serif;
   letter-spacing: 1px;
 }
-#location {
-  font-size: 15px;
-}
 p {
   font-family: 'PT Sans', sans-serif;
 }
 a {
   text-decoration: none;
+  font-style: italic;
   color: #3775e8;
 }
 .entry_link {
-  height: 20px;
   float: right;
   margin-right: 80px;
+  font-style: italic;
 }
 .wrapper {
   width:100%;
@@ -120,10 +118,11 @@ img {
 }
 .post {
   width: 90%;
-  height: 170px;
   border-bottom: 2px solid #3775e8;
   margin-left: 50px;
   margin-top: 20px;
+  clear: both;
+  overflow: hidden;
 }
 .post_show {
   width: 90%;
@@ -162,7 +161,9 @@ img {
   float: right;
 }
 label {
-  float: left;
+    float: left;
+    text-align: right;
+    display: block;
 }
 .loginform {
   margin-left: 50px;
@@ -187,4 +188,11 @@ label {
 .navbox a {
   text-align: left;
   color: #3775e8
+}
+.field_notes {
+  height: 100px;
+  width: 150px;
+}
+.location {
+  font-size: 15px;
 }

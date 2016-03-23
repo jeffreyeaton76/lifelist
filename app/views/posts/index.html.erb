@@ -2,8 +2,11 @@
 <% @posts.reverse.each do |post| %>
 <div class="post">
   <div class="bird_img"><img class="bird_img" src="<%= post.img_url %>" alt="<%= post.bird %>"></div>
-  <h2><%= post.bird.titleize %>, <span id="location">in <%= post.city %>, <%= post.state %>, by <%= post.user.first_name %> <%= post.user.last_name %></span></h2>
+  <h2><%= post.bird.titleize %>, <span class="location">in <%= post.city %>, <%= post.state %>, by <%= post.user.first_name %> <%= post.user.last_name %></span></h2>
   <p> <%= post.field_notes %> </p>
-  <div class="entry_link"><h3><i><%= link_to "Go to Sighting", post_path(post) %></i></h3></div>
+  <div class="entry_link">
+    <h3><%= link_to "Go to Sighting", post_path(post) %></h3>
+    <h3><span class="location">Comments: <%= post.comments.length %></span></h3>
+  </div>
 </div>
 <% end %>

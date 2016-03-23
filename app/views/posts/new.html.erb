@@ -18,7 +18,7 @@
 <%= f.text_field :state %>
 <p></p>
 <%= f.label :field_notes %>
-<%= f.text_field :field_notes %>
+<%= f.text_field :field_notes, :class => "field_notes"%>
 <p></p>
 <%= f.hidden_field :user_id, :value => @current_user.id %>
 <br>
