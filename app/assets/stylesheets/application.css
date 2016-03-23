@@ -132,7 +132,7 @@ img {
 }
 .form_new_post,
 .form-signin {
-  max-width: 350px;
+  max-width: 380px;
   padding: 19px 29px 29px;
   margin: 0 auto 20px;
   height: 400px;
@@ -148,8 +148,7 @@ img {
 }
 .submit_button {
   font-size: 20px;
-  margin-top: 180px;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
@@ -161,9 +160,9 @@ img {
   float: right;
 }
 label {
-    float: left;
-    text-align: right;
-    display: block;
+  float: left;
+  text-align: right;
+  display: block;
 }
 .loginform {
   margin-left: 50px;

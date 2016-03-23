@@ -1,12 +1,13 @@
 <% if @current_user == nil %>
-  <div class=loginform>
     <%= form_for :session, :as => :user, url: sessions_path, method: :post do |f| %>
+    <div class=loginform>
     <%= f.label :username %><br>
     <%= f.text_field :username %>
     <br>
     <br>
     <%= f.label :password %><br>
     <%= f.password_field :password %>
+    <br>
     <br>
     <%= f.submit "Submit" %>
   </div>

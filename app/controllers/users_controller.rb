@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def new
-    redirect_to root_path unless @current_user
     @user = User.new
   end
 

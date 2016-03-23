@@ -2,13 +2,13 @@
 <% @user.posts.reverse.each do |post| %>
 <div class="post_show">
   <div class="bird_img"><img class="bird_img" src="<%= post.img_url %>" alt="<%= post.bird %>"></div>
-  <h2><%= post.bird.titleize %>, <span id="location">in <%= post.city %>, <%= post.state %>, by <%= post.user.first_name %> <%= post.user.last_name %></span></h2>
+  <h2><%= post.bird.titleize %>, <span class="location">in <%= post.city %>, <%= post.state %>, by <%= post.user.first_name %> <%= post.user.last_name %></span></h2>
   <p> <%= post.field_notes %> </p>
   <div class="entry_link">
     <h3><%= link_to "Edit Post", edit_post_path(post) %></h3>
     <h3><%= link_to "Delete Post", post_path(post), :method => :delete, data: {confirm: 'Are you sure?'} %></h3>
   </div>
-</div>
+<br>
 <br>
 <h2>Comments</h2>
 <% post.comments.reverse.each do |comment| %>
@@ -16,3 +16,4 @@
   <p><i>-- <%= comment.user.first_name %> <%= comment.user.last_name %></i></div>
     <% end %>
     <% end %>
+  </div>
