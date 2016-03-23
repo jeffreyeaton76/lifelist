@@ -5,7 +5,7 @@
   <p> <%= @post.field_notes %> </p>
   <br>
   <h2>Comments</h2>
-  <%= form_for ([@post, @post.comments.build]) do |f| %>
+  <%= form_for new_post_comment_path(@post) do |f| %>
   <p>
     <%= f.text_field :body, :placeholder => "Leave a comment", :class => 'comment_field' %>
   </p>
