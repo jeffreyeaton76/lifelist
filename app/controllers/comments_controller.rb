@@ -20,8 +20,19 @@ class CommentsController < ApplicationController
 
   def edit
     redirect_to root_path unless @current_user
-    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])
+  end
+
+  def update
+    redirect_to post_path unless @current_user
+    @comment = Comment.find(params[:id])
+    @post = @comment.post
+    if @comment.update(comment_params)
+      redirect_to @post
+    else
+      render 'edit'
+    end
   end
 
   def show

@@ -195,3 +195,7 @@ label {
 .location {
   font-size: 15px;
 }
+.comment_field {
+  width: 200px;
+  height: 100px;
+}

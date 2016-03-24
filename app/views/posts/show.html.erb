@@ -4,6 +4,12 @@
   <h2><%= @post.bird.titleize %>, <span class="location">in <%= @post.city %>, <%= @post.state %> by <%= @post.user.first_name %> <%= @post.user.last_name %><p>
   <%= @post.date_seen %></p></span></h2>
   <p> <%= @post.field_notes %> </p>
+  <% if @post.user == @current_user %>
+  <div class="entry_link">
+  <h3><%= link_to "Edit Post", edit_post_path(@post) %></h3>
+  <h3><%= link_to "Delete Post", post_path(@post), :method => :delete, data: {confirm: 'Are you sure?'} %></h3>
+</div>
+  <% end %>
   <br>
   <h2>Comments</h2>
   <% if @current_user == nil %>
@@ -19,6 +25,7 @@
   <div class="comments"><p><i><%= comment.body %></i></p>
   <p><i>-- <%= comment.user.first_name %> <%= comment.user.last_name %></i></div>
     <% if comment.user == @current_user %>
+    <h3><%= link_to "Edit Your Comment", edit_post_comment_path(@post, comment) %></h3>
     <h3><%= link_to "Delete Your Comment", post_comment_path(@post, comment), :method => :delete, data: {confirm: 'Are you sure?'} %></h3>
     <% end %>
     <p>------------------------------</p>

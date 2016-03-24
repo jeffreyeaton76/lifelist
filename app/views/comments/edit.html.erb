@@ -1,0 +1,10 @@
+<h1 id="header_index">Edit Your Comment</h1>
+<div class="form_new_post">
+
+<%= form_for [@post, @comment] do |f| %>
+<p>
+  <%= f.text_field :body, :class => 'comment_field' %>
+</p>
+<br>
+<%= f.submit "Submit", :class => "submit_button" %>
+<% end %>
