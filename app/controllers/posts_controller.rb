@@ -41,7 +41,7 @@ class PostsController < ApplicationController
     redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to user_path
+    redirect_to user_path(@current_user)
   end
 
   private
