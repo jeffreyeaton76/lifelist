@@ -1,8 +1,8 @@
 <h1 id="header_index">Latest Sightings</h1>
 <div class="post_show">
   <div class="bird_img"><img class="bird_img" src="<%= @post.img_url %>" alt="<%= @post.bird %>"></div>
-  <h2><%= @post.bird.titleize %>, <span class="location">in <%= @post.city %>, <%= @post.state %> by <%= @post.user.first_name %> <%= @post.user.last_name %><p>
-  <%= @post.date_seen %></p></span></h2>
+  <h2><%= @post.bird.titleize %>, <span class="location">in <%= @post.city %>, <%= @post.state %> by <%= @post.user.first_name %> <%= @post.user.last_name %><br>
+  <%= @post.date_seen %></span></h2>
   <p> <%= @post.field_notes %> </p>
   <% if @post.user == @current_user %>
   <div class="entry_link">

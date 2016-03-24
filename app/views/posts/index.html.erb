@@ -4,8 +4,8 @@
   <div class="bird_img">
     <img class="bird_img" src="<%= post.img_url %>" alt="<%= post.bird %>">
   </div>
-  <h2><%= link_to post.bird.titleize, post_path(post) %>, <span class="location">in <%= post.city %>, <%= post.state %>, by <%= post.user.first_name %> <%= post.user.last_name %><p>
-  <%= post.date_seen %></p></span></h2>
+  <h2><%= link_to post.bird.titleize, post_path(post) %>, <span class="location">in <%= post.city %>, <%= post.state %>, by <%= post.user.first_name %> <%= post.user.last_name %><br>
+  <%= post.date_seen %></span></h2>
   <p> <%= post.field_notes %> </p>
   <div class="entry_link">
     <h3><%= link_to "Go to Sighting", post_path(post) %></h3>
