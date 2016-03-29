@@ -14,6 +14,9 @@
 *= require_self
 */
 
+
+/*JGZ - Any reason to add in the SASS files for your models without using them?*/
+
 * {
   /*border: 1px solid black;*/
   box-sizing: border-box;
@@ -34,7 +37,10 @@ body {
   letter-spacing: 3px;
   color: #3775e8;
   text-align: right;
+  /*JGZ - To start adding in more responsiveness, I'd challenge you to start
+  incorporating 'em' and '%' for everything, and getting away from 'px'*/
   margin-right: 40px;
+  /*JGZ - Think there's a typo here?*/
   font-size: 40pt;
 }
 h2 {

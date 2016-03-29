@@ -1,3 +1,4 @@
+<!-- JGZ - I think there could be a little more indenting and spacing here. It's a lot of code on one page! -->
 <h1 id="header_index">Latest Sightings</h1>
 <div class="post_show">
   <div class="bird_img"><img class="bird_img" src="<%= @post.img_url %>" alt="<%= @post.bird %>"></div>
@@ -5,6 +6,7 @@
   <%= @post.date_seen %></span></h2>
   <p> <%= @post.field_notes %> </p>
   <% if @post.user == @current_user %>
+  <!-- JGZ - A good example of necessary indenting -->
   <div class="entry_link">
   <h3><%= link_to "Edit Post", edit_post_path(@post) %></h3>
   <h3><%= link_to "Delete Post", post_path(@post), :method => :delete, data: {confirm: 'Are you sure?'} %></h3>
@@ -15,6 +17,9 @@
   <% if @current_user == nil %>
   <h3>Please sign in to leave a comment!</h3>
   <% else %>
+
+  <!-- JGZ - Try to avoid using Classes within a view. Better to move this to
+        a controller and do something like: @comment = Comment.new, then just use @comment here -->
   <%= form_for [@post, Comment.new] do |f| %>
   <p>
     <%= f.text_field :body, :placeholder => "Leave a comment", :class => 'comment_field' %>

@@ -9,6 +9,8 @@ class PostsController < ApplicationController
   end
 
   def new
+
+    # JGZ - I notice this repeated for everything here, can you think of a way to DRY this up?
     redirect_to root_path unless @current_user
     @post = Post.new
   end
@@ -41,6 +43,8 @@ class PostsController < ApplicationController
     redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
     @post.destroy
+
+    # JGZ - can be shorted to just @current_user
     redirect_to user_path(@current_user)
   end
 
