@@ -4,7 +4,7 @@ See the full rubric [here](https://github.com/ga-wdi-exercises/project2/blob/mas
 ​
 My code comments are here:
 ​
-https://github.com/something/project2/pulls/42
+https://github.com/jeffreyeaton76/lifelist/pull/1
 ​
 ## Technical Requirements
 ​
