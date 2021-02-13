@@ -4,9 +4,11 @@ class CommentsController < ApplicationController
   end
 
   def create
+    # JGZ - I notice this repeated for everything here, can you think of a way to DRY this up?
     redirect_to root_path unless @current_user
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create!(comment_params)
+    # JGZ - Nice! I like this, though i think you can shorten it up by saving it all at once?
     @comment.user = @current_user
     @comment.save
     redirect_to post_url(@post)

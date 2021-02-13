@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+# JGZ - I think this is a solid use of nested resources here!
+
   resources :users
   resources :posts do
     resources :comments

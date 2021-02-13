@@ -1,9 +1,11 @@
 <h1 id="header_index">Latest Sightings</h1>
+<!-- JGZ - Nice with the reverse! -->
 <% @posts.reverse.each do |post| %>
 <div class="post">
   <div class="bird_img">
     <img class="bird_img" src="<%= post.img_url %>" alt="<%= post.bird %>">
   </div>
+  <!-- JGZ - This feels like a bit of a mouthful in one line. instead of using <br> and wrapping it all in the h2, is there a cleaner way to do this? -->
   <h2><%= link_to post.bird.titleize, post_path(post) %>, <span class="location">in <%= post.city %>, <%= post.state %>, by <%= post.user.first_name %> <%= post.user.last_name %><br>
   <%= post.date_seen %></span></h2>
   <p> <%= post.field_notes %> </p>
